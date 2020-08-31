@@ -1,32 +1,59 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Runnig NestJs in a Docker Container
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+This is a [Nest Js](https://github.com/nestjs/nest) project configured for use with Docker
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+Ensure also that [Docker is installed](https://docs.docker.com/engine/install) on your work station
 
-## Running the app
+
+## Running the app using node server (the normal way)
 
 ```bash
 # development
-$ npm run start
-
-# watch mode
 $ npm run start:dev
+or
+nest start
 
-# production mode
-$ npm run start:prod
+# Debug/watch
+$ npm run start:debug
+
+# production
+$ npm run build:prod
+$ npm start
 ```
+
+## See api endpoints
+
+```bash
+http://localhost:3000/api/
+```
+
+## Using Docker Compose
+```sh
+# Build the docker image
+$ docker-compose build
+
+# Start and login to the container
+$ docker-compose up -d
+$ docker-compose exec app sh
+```
+
+## Other useful Docker commands
+```sh
+# Get the container ID
+$ docker ps
+
+# View logs
+$ docker logs <container id>
+
+# Enter the container (In alpine, use sh because bash is not installed by default)
+$ docker exec -it <container id> /bin/sh
+```
+
 
 ## Test
 
