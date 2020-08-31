@@ -12,7 +12,7 @@ import { PricinglistsModule } from './pricinglists/pricinglists.module';
               ProductsModule, 
               CategoriesModule, 
               PricinglistsModule,
-              MongooseModule.forRoot('mongodb+srv://ParedesFabio:password@restservernode-g2em6.mongodb.net/pricingListAPI', { useFindAndModify: false })
+              MongooseModule.forRoot('mongodb+srv://username:password@restservernode-g2em6.mongodb.net/pricingListAPI', { useFindAndModify: false })
   ],
   controllers: [AppController],
   providers: [AppService],
