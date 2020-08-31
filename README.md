@@ -50,9 +50,7 @@ $ docker exec -it <container id> /bin/sh
 
 ## See api endpoints
 
-```bash
-http://localhost:3000/api/
-```
+[API Description](http://localhost:3000/api/)
 
 ## Test
 
