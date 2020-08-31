@@ -26,12 +26,6 @@ $ npm run build:prod
 $ npm start
 ```
 
-## See api endpoints
-
-```bash
-http://localhost:3000/api/
-```
-
 ## Using Docker Compose
 ```sh
 # Build the docker image
@@ -54,6 +48,11 @@ $ docker logs <container id>
 $ docker exec -it <container id> /bin/sh
 ```
 
+## See api endpoints
+
+```bash
+http://localhost:3000/api/
+```
 
 ## Test
 
